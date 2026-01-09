@@ -3,10 +3,12 @@ name: Update Component Manifest
 on:
   release:
     types: [published]
-  workflow_dispatch: # Permette di avviarlo manualmente
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   generate-manifest:
@@ -21,12 +23,14 @@ jobs:
           script: |
             const fs = require('fs');
             
+            // Helper to determine type from filename
             function getType(filename) {
               const lower = filename.toLowerCase();
               if (lower.includes('wine') || lower.includes('proton')) return 'wine';
-              if (lower.includes('dxvk')) return 'dxvk';
+              if (lower.includes('dxvk') || lower.includes('d8vk')) return 'dxvk';
               if (lower.includes('vkd3d')) return 'vkd3d';
               if (lower.includes('fex')) return 'fexcore';
+              if (lower.includes('wowbox64')) return 'wowbox64';
               if (lower.includes('box64')) return 'box64';
               if (lower.includes('turnip')) return 'turnip';
               if (lower.includes('virgl')) return 'virgl';
@@ -35,6 +39,8 @@ jobs:
 
             async function run() {
               const manifest = {};
+              
+              // Get all releases
               const releases = await github.paginate(github.rest.repos.listReleases, {
                 owner: context.repo.owner,
                 repo: context.repo.repo,
@@ -42,16 +48,20 @@ jobs:
               });
 
               for (const release of releases) {
-                if (release.draft || release.prerelease) continue;
+                if (release.draft || release.prerelease) continue; // Skip drafts/prereleases if desired
 
                 for (const asset of release.assets) {
+                  // Filter for relevant extensions if needed (e.g., .tzst, .tar.xz)
                   if (!asset.name.endsWith('.tzst') && !asset.name.endsWith('.tar.xz')) continue;
 
                   const type = getType(asset.name);
                   if (!manifest[type]) manifest[type] = [];
+
+                  // Check if version already exists (deduplication strategy: keep newest or all? keeping all for now)
+                  // We might want to parse version from tag or filename
                   
                   manifest[type].push({
-                    version: release.tag_name, 
+                    version: asset.name.replace('.tzst', '').replace('.tar.xz', ''),
                     url: asset.browser_download_url,
                     size: asset.size,
                     name: asset.name,
@@ -60,8 +70,11 @@ jobs:
                   });
                 }
               }
+
+              console.log(JSON.stringify(manifest, null, 2));
               fs.writeFileSync('component-manifest.json', JSON.stringify(manifest, null, 2));
             }
+            
             run();
 
       - name: Deploy to GitHub Pages
@@ -70,4 +83,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
-          keep_files: false # Sovrascrive il vecchio manifest con quello nuovo completo
+          keep_files: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
