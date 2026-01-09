@@ -1,5 +1,55 @@
 {
+  "vkd3d": [
+    {
+      "version": "vkd3d",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/vkd3d/vkd3d-2.12.tzst",
+      "size": 2140490,
+      "name": "vkd3d-2.12.tzst",
+      "tag": "vkd3d",
+      "upload_date": "2026-01-09T13:45:26Z"
+    },
+    {
+      "version": "vkd3d",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/vkd3d/vkd3d-2.13.tzst",
+      "size": 2134905,
+      "name": "vkd3d-2.13.tzst",
+      "tag": "vkd3d",
+      "upload_date": "2026-01-09T13:45:27Z"
+    },
+    {
+      "version": "vkd3d",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/vkd3d/vkd3d-2.14.1.tzst",
+      "size": 2352920,
+      "name": "vkd3d-2.14.1.tzst",
+      "tag": "vkd3d",
+      "upload_date": "2026-01-09T13:45:28Z"
+    },
+    {
+      "version": "vkd3d",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/vkd3d/vkd3d-2.6.tzst",
+      "size": 1805143,
+      "name": "vkd3d-2.6.tzst",
+      "tag": "vkd3d",
+      "upload_date": "2026-01-09T13:45:25Z"
+    },
+    {
+      "version": "vkd3d",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/vkd3d/vkd3d-3.0b.tzst",
+      "size": 3978975,
+      "name": "vkd3d-3.0b.tzst",
+      "tag": "vkd3d",
+      "upload_date": "2026-01-09T13:45:29Z"
+    }
+  ],
   "wine": [
+    {
+      "version": "proton",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/proton/proton-9.0-arm64ec_container_pattern.tzst",
+      "size": 10309411,
+      "name": "proton-9.0-arm64ec_container_pattern.tzst",
+      "tag": "proton",
+      "upload_date": "2026-01-09T13:41:00Z"
+    },
     {
       "version": "proton",
       "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/proton/proton-9.0-x86_64_container_pattern.tzst",
@@ -7,6 +57,80 @@
       "name": "proton-9.0-x86_64_container_pattern.tzst",
       "tag": "proton",
       "upload_date": "2026-01-09T13:35:11Z"
+    }
+  ],
+  "dxvk": [
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-1.10.1.tzst",
+      "size": 6724726,
+      "name": "dxvk-1.10.1.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:33Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-1.10.3.tzst",
+      "size": 7544894,
+      "name": "dxvk-1.10.3.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:34Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-1.10.9-sarek.tzst",
+      "size": 3696389,
+      "name": "dxvk-1.10.9-sarek.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:35Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-1.9.2.tzst",
+      "size": 3338221,
+      "name": "dxvk-1.9.2.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:31Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-2.4.1-gplasync.tzst",
+      "size": 9131308,
+      "name": "dxvk-2.4.1-gplasync.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:39Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-2.4.1.tzst",
+      "size": 9121924,
+      "name": "dxvk-2.4.1.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:37Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-2.6.1-gplasync.tzst",
+      "size": 4740600,
+      "name": "dxvk-2.6.1-gplasync.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:40Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-2.7.1.tzst",
+      "size": 4768366,
+      "name": "dxvk-2.7.1.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:41Z"
+    },
+    {
+      "version": "dxvk",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/dxvk/dxvk-async-1.10.3.tzst",
+      "size": 10075341,
+      "name": "dxvk-async-1.10.3.tzst",
+      "tag": "dxvk",
+      "upload_date": "2026-01-09T13:41:43Z"
     }
   ]
 }
