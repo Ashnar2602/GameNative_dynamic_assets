@@ -166,5 +166,63 @@
       "tag": "dxvk",
       "upload_date": "2026-01-09T13:41:43Z"
     }
+  ],
+  "box64": [
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.2-bionic.tzst",
+      "size": 2961195,
+      "name": "box64-0.3.2-bionic.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:43Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.4.tzst",
+      "size": 4008431,
+      "name": "box64-0.3.4.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:44Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.6-bionic.tzst",
+      "size": 3123675,
+      "name": "box64-0.3.6-bionic.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:46Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.6.tzst",
+      "size": 4591893,
+      "name": "box64-0.3.6.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:45Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.7-bionic.tzst",
+      "size": 2971992,
+      "name": "box64-0.3.7-bionic.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:47Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.8-bionic.tzst",
+      "size": 3646823,
+      "name": "box64-0.3.8-bionic.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:50Z"
+    },
+    {
+      "version": "box64",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/box64/box64-0.3.8.tzst",
+      "size": 4234635,
+      "name": "box64-0.3.8.tzst",
+      "tag": "box64",
+      "upload_date": "2026-01-09T13:47:49Z"
+    }
   ]
 }
