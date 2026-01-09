@@ -59,6 +59,40 @@
       "upload_date": "2026-01-09T13:35:11Z"
     }
   ],
+  "fexcore": [
+    {
+      "version": "fex",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/fex/fexcore-2507.tzst",
+      "size": 1467636,
+      "name": "fexcore-2507.tzst",
+      "tag": "fex",
+      "upload_date": "2026-01-09T13:46:07Z"
+    },
+    {
+      "version": "fex",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/fex/fexcore-2508.tzst",
+      "size": 3143123,
+      "name": "fexcore-2508.tzst",
+      "tag": "fex",
+      "upload_date": "2026-01-09T13:46:08Z"
+    },
+    {
+      "version": "fex",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/fex/fexcore-2511.tzst",
+      "size": 3444135,
+      "name": "fexcore-2511.tzst",
+      "tag": "fex",
+      "upload_date": "2026-01-09T13:46:09Z"
+    },
+    {
+      "version": "fex",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/fex/fexcore-2512.tzst",
+      "size": 3468615,
+      "name": "fexcore-2512.tzst",
+      "tag": "fex",
+      "upload_date": "2026-01-09T13:46:10Z"
+    }
+  ],
   "dxvk": [
     {
       "version": "dxvk",
