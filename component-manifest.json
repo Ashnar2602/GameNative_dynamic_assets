@@ -1,0 +1,12 @@
+{
+  "wine": [
+    {
+      "version": "proton",
+      "url": "https://github.com/Ashnar2602/GameNative_dynamic_assets/releases/download/proton/proton-9.0-x86_64_container_pattern.tzst",
+      "size": 8698674,
+      "name": "proton-9.0-x86_64_container_pattern.tzst",
+      "tag": "proton",
+      "upload_date": "2026-01-09T13:35:11Z"
+    }
+  ]
+}
