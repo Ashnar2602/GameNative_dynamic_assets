@@ -1,0 +1,73 @@
+name: Update Component Manifest
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch: # Permette di avviarlo manualmente
+
+permissions:
+  contents: write
+
+jobs:
+  generate-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate Manifest
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            function getType(filename) {
+              const lower = filename.toLowerCase();
+              if (lower.includes('wine') || lower.includes('proton')) return 'wine';
+              if (lower.includes('dxvk')) return 'dxvk';
+              if (lower.includes('vkd3d')) return 'vkd3d';
+              if (lower.includes('fex')) return 'fexcore';
+              if (lower.includes('box64')) return 'box64';
+              if (lower.includes('turnip')) return 'turnip';
+              if (lower.includes('virgl')) return 'virgl';
+              return 'other';
+            }
+
+            async function run() {
+              const manifest = {};
+              const releases = await github.paginate(github.rest.repos.listReleases, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                per_page: 100
+              });
+
+              for (const release of releases) {
+                if (release.draft || release.prerelease) continue;
+
+                for (const asset of release.assets) {
+                  if (!asset.name.endsWith('.tzst') && !asset.name.endsWith('.tar.xz')) continue;
+
+                  const type = getType(asset.name);
+                  if (!manifest[type]) manifest[type] = [];
+                  
+                  manifest[type].push({
+                    version: release.tag_name, 
+                    url: asset.browser_download_url,
+                    size: asset.size,
+                    name: asset.name,
+                    tag: release.tag_name,
+                    upload_date: asset.updated_at
+                  });
+                }
+              }
+              fs.writeFileSync('component-manifest.json', JSON.stringify(manifest, null, 2));
+            }
+            run();
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          keep_files: false # Sovrascrive il vecchio manifest con quello nuovo completo
